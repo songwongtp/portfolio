@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+a + p, h2 + p {
+    margin-left: 5px;
+}
+
+.image{
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #AC9A96;
+}
+
+#header-nav {
+    background-color: mistyrose;
+}
+
+#header-con {
+    height: 150px;
+}
+
+#header-menu {
+    position: relative;
+}
+
+#collapsable-nav {
+    clear: both;
+}
+
+#profilePic-con {
+    margin: -140px auto 0px;
+    overflow: hidden;
+    display: block;
+    max-width: 280px;
+}
+
+#crest {
+    margin-top: -130px;
+    margin-left: 170px;
+}
+
+#mainText {
+    margin: 5px 2px;
+    border: 4px solid #AC9A96;
+    padding: 0px 20px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    background-color: #F2FF72;
+}
