@@ -26,6 +26,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
                     </div>
                     <div id="collapsable-nav" class="collapse navbar-collapse">
@@ -34,15 +35,15 @@
                           <a href="index.html">
                             <span class="glyphicon glyphicon-home"></span> Home</a>
                         </li>
-                        <li>
+                        <li id="navAboutmeButton" class="navButton">
                           <a href="#" onclick="$choose.loadAboutMe();">
                             <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> About me</a>
                         </li>
-                        <li>
+                        <li id="navResumeButton" class="navButton">
                           <a href="#" onclick="$choose.loadResume();">
                             <span class="glyphicon glyphicon-file"></span><br class="hidden-xs"> Resume</a>
                         </li>
-                        <li>
+                        <li id="navContactButton" class="navButton">
                           <a href="#" onclick="$choose.loadContact();">
                             <span class="glyphicon glyphicon-comment"></span><br class="hidden-xs"> Contact</a>
                         </li>
@@ -54,7 +55,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-xs-12">
-                    <a id="profilePic-con" href="index.html">
+                    <a href="index.html" id="profilePic-con">
                         <img class="image" src="images/profile.jpg" alt="Profile Picture"/>
                         <img id="crest" src="images/uwcrest.png" alt="UW-Madison Crest"/>
                     </a>

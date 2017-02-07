@@ -8,14 +8,18 @@ a + p, h2 + p {
 }
 
 .image{
-    max-width: 280px;
-    width: 100%;
-    height: auto;
+    display: block;
+    width: 280px;
     border-radius: 50%;
     border: 4px solid #AC9A96;
 }
 
+a > .glyphicon {
+    font-size: 1.5em;
+}
+
 #header-nav {
+    min-height: 250px;
     background-color: mistyrose;
 }
 
@@ -33,14 +37,13 @@ a + p, h2 + p {
 
 #profilePic-con {
     margin: -140px auto 0px;
-    overflow: hidden;
     display: block;
-    max-width: 280px;
+    width: 280px;
 }
 
 #crest {
-    margin-top: -130px;
-    margin-left: 170px;
+    margin-top: -160px;
+    margin-left: 180px;
 }
 
 #mainText {
@@ -50,4 +53,52 @@ a + p, h2 + p {
     border-radius: 20px;
     font-size: 1.2em;
     background-color: #F2FF72;
+}
+
+@media (min-width: 768px) {
+    .navButton > a {
+        margin: 0px 2.5px;
+        text-align: center;
+        transition: all .2s;
+    }
+
+    .active.navButton > a {
+        margin-top: -15px;
+        border-radius: 20%;
+        border: 2px solid black;
+        box-shadow: 0px 3px 3px grey;
+        transition: all .2s;
+    }
+
+    .navButton > a:hover {
+        margin-top: -20px;
+        transition: all .2s;
+    }
+}
+
+@media (max-width: 767px) {
+    #header-con {
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 450px) {
+    #header-nav {
+        min-height: 200px;
+    }
+
+    #header-con > a > h1 {
+        font-size: 32px;
+    }
+
+    .image  {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    #crest {
+        width: 65px;
+        margin-top: -120px;
+        margin-left: 170px;
+    }
 }

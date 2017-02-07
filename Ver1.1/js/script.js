@@ -24,6 +24,23 @@ var showLoading = function (selector) {
     insertHtml(selector, html);
 };
 
+var currentActiveButton = "#navHomeButton";
+var switchButtonToActive = function (ButtonId) {
+    // Remove Current Active Button
+    var classes = document.querySelector(currentActiveButton).className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    classes = classes.replace(new RegExp("  ", "g"), " ");
+    document.querySelector(currentActiveButton).className = classes;
+
+    classes = document.querySelector(ButtonId).className;
+    if(classes.indexOf("active") == -1) {
+        classes += " active";
+        document.querySelector(ButtonId).className = classes;
+    }
+
+    currentActiveButton = ButtonId;
+};
+
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
 
@@ -32,8 +49,7 @@ showLoading("#mainText");
 $ajaxUtils.sendGetRequest(
     homeHtml,
     function (responseText) {
-        document.querySelector("#mainText")
-            .innerHTML = responseText;
+        document.querySelector("#mainText").innerHTML = responseText;
     },
     false);
 });
@@ -43,8 +59,8 @@ choose.loadAboutMe = function() {
     $ajaxUtils.sendGetRequest(
         meHtml,
         function (responseText) {
-            document.querySelector("#mainText")
-                .innerHTML = responseText;
+            switchButtonToActive("#navAboutmeButton");
+            document.querySelector("#mainText").innerHTML = responseText;
         },
         false);
 };
@@ -54,8 +70,8 @@ choose.loadResume = function() {
     $ajaxUtils.sendGetRequest(
         resumeHtml,
         function (responseText) {
-            document.querySelector("#mainText")
-                .innerHTML = responseText;
+            switchButtonToActive("#navResumeButton");
+            document.querySelector("#mainText").innerHTML = responseText;
         },
         false);
 };
@@ -65,8 +81,8 @@ choose.loadContact = function() {
     $ajaxUtils.sendGetRequest(
         contactHtml,
         function (responseText) {
-            document.querySelector("#mainText")
-                .innerHTML = responseText;
+            switchButtonToActive("#navContactButton");
+            document.querySelector("#mainText").innerHTML = responseText;
         },
         false);
 };
