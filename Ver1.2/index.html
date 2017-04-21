@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Songwong (Nat) Tasneeyapant </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!--beginning of header-->
+        <header>
+            <nav id="header-nav" class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div id="header-con">
+                            <a href="index.html"><h1>Songwong Tasneeyapant</h1></a>
+                            <p>
+                                <span>An undergraduate student @ UW-Madison</span>
+                            </p>
+                        </div>
+
+                        <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="collapsable-nav" class="collapse navbar-collapse">
+                       <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li id="navHomeButton" class="visible-xs active">
+                          <a href="index.html">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                        </li>
+                        <li id="navAboutmeButton" class="navButton">
+                          <a href="#" onclick="$choose.loadAboutMe();">
+                            <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> About me</a>
+                        </li>
+                        <li id="navResumeButton" class="navButton">
+                          <a href="#" onclick="$choose.loadResume();">
+                            <span class="glyphicon glyphicon-file"></span><br class="hidden-xs"> Resume</a>
+                        </li>
+                        <li id="navContactButton" class="navButton">
+                          <a href="#" onclick="$choose.loadContact();">
+                            <span class="glyphicon glyphicon-comment"></span><br class="hidden-xs"> Contact</a>
+                        </li>
+                    </div>
+                </div>
+            </nav><!--header's nav-->
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-xs-12">
+                    <a href="index.html" id="profilePic-con">
+                        <img class="image" src="images/profile.jpg" alt="Profile Picture"/>
+                        <img id="crest" src="images/uwcrest.png" alt="UW-Madison Crest"/>
+                    </a>
+                </div>
+                <div class="col-sm-7 col-xs-12">
+                    <div id="mainText"></div>
+                </div>
+            </div>
+            <hr style="height:2px; width:60%; border:none; background-color:mistyrose;">
+        </div>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ajax-utils.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
